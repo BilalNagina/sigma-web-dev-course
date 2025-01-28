@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS selectors</title>
+    <style>
+      div {
+        /* color: blueviolet;  */
+      }
+      .red {
+        color: magenta;
+      }
+      #blue {
+        color: palegreen;
+      }
+      /* div > p {
+            color: goldenrod;
+        } */
+      div p {
+        color: goldenrod;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a:visited {
+        color: hotpink;
+      }
+      a:hover {
+        background-color: firebrick;
+      }
+      a:link {
+        color: lawngreen;
+      }
+      a:active{
+        color: tomato;
+      }
+      p:first-child{
+        background-color: darkmagenta;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red">This is a div of class red</div>
+    <div id="blue">This is a div of class none</div>
+    <div>
+      <article>
+        <!-- <p>this is p</p> -->
+      </article>
+    </div>
+    <div class="one">
+        <p>i am one</p>
+        <p>i am two</p>
+    </div>
+    <a href="https://www.google.com" target="_blank">Go to google</a>
+  </body>
+</html>
