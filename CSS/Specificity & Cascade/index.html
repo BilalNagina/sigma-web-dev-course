@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity & Cascading</title>
+    <style>
+        /* element selector specificity is 1 */
+        h1{
+            background-color: blueviolet;
+        }
+        /* universal selector specificity is 0 */
+        *{
+             background-color: hotpink;  /* !important; */
+        }
+        /* class selector specifity is 10 */
+        .green{
+            background-color: greenyellow;
+        }
+        .red{
+            background-color: red;
+        }
+        /* the last one has the authority if the specificity is same */
+        .white{
+            background-color: orange;
+        }
+        /* id selector specificity is 100 */
+        #yaho{
+            background-color: violet;
+        }
+        /* attribute selector specificity is 10 */
+        [data-x=a]{
+            background-color: lawngreen;
+        }
+        /* test selector */
+        /* a.harryclass.bilal-class[href]:hover{
+            background-color: firebrick;
+        } The specificity id 1+10+10+10+10=41*/
+
+    </style>
+</head>
+<body>
+    <!-- inline CSS: specificity is 1000 -->
+    <h1 style="color: blue;" class="green red white" id="yaho" [data-x]="a">
+        Hello this is me
+    </h1>
+</body>
+</html>
