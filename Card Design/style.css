@@ -5,7 +5,10 @@
   height: 650px;
   border-radius: 17px;
   border: 2px solid black;
+  position: relative;
+  top: -80px;
   margin: 150px;
+
 }
 .image img {
   border-radius: 17px;
