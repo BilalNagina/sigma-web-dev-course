@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positions in CSS</title>
+    <style>
+        .parent{
+            border: 3px solid rgb(87, 4, 155);
+            margin: 34px;
+            padding: 3px;
+            /* position: absolute; */
+            
+            /* ********Exception Properties *********** */
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            /* perspective: 0em; */
+
+        }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        border: 2px solid black;
+        width: 80vw;
+        height: 30vh;
+        padding: 30px;
+        margin: 5px;
+      }
+      .box1 {
+        background-color: rgb(226, 43, 43);
+        /* z-index: 1;  */
+        /*it is important to set position to enable z-index*/
+
+        /* position: relative; */
+        /* top: 8px; */
+        /* left: 59px; */
+        /* position: sticky;
+        margin: 0px;
+        padding: 0px;
+        top: 0px;
+        height: 100px;
+        width: 100%; */
+      }
+      .box2 {
+        background-color: rgb(43, 226, 55);
+        position: absolute; 
+        /* Stacks up on any box */
+        top: 0px;
+        left: 50px;
+        right: 40px;
+        bottom: 40px;
+        /* write either of the two(left or right/ top or bottom) */
+        /* bottom:; */
+      }
+      .box3 {
+        background-color: rgb(30, 176, 142);
+        /* position: fixed;
+        height: 111px;
+        bottom: 0px;
+        left: 8vw; */
+      }
+      .box4 {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>
