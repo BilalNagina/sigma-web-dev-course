@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar-MultiColoured</title>
+    <style>
+      :root {
+        --color: rgb(238, 95, 169);
+        --textc: rgb(47, 25, 7);
+        --hcolor: rgb(22, 231, 119);
+      }
+      nav ul li {
+        background-color: var(--color);
+        color: var(--textc);
+        list-style: none;
+        padding: 4px;
+        border: 2px solid black;
+        margin: 3px;
+        font-weight: bold;
+      }
+      nav ul li:hover {
+        color: var(--hcolor);
+      }
+      nav ul {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact Us</li>
+      </ul>
+    </nav>
+  </body>
+</html>
