@@ -1,69 +1,67 @@
+body{
+  display: flex;
+  background-color: gray;
+}
 .parent {
   background-color: rgb(232, 232, 234);
-  width: 35vw;
+  width: 20vw;
   padding: 10px;
-  height: 650px;
+  height: 460px;
   border-radius: 17px;
-  border: 2px solid black;
-  position: relative;
-  top: -80px;
-  margin: 150px;
+  border: 2px solid rgb(116, 113, 113);
+  margin: 10px;
 
 }
 .image img {
   border-radius: 17px;
 }
+
 .tags span {
   margin: 9px;
   justify-content: center;
   align-items: center;
   width: 50px;
   display: inline-flex;
-  outline: auto;
-  outline-style: dotted;
+  border: 2px solid rgb(200, 186, 186);
   border-radius: 17px;
-  padding: 5px;
-  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
   background-color: rgb(245, 245, 250);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: relative;
-  top: 5px;
+  /* position: relative;
+  top: 5px; */
 }
 .heading p {
   font-family: cursive;
+  padding: 0px;
   margin: 5px;
-  position: relative;
-  top: 10px;
-  font-size: 16px;
+  font-size: 13px;
 }
 .heading h1 {
   font-family: cursive;
   margin: 5px;
-  position: relative;
-  top: 5px;
+  padding: 0px;
+  font-size: 22px;
 }
-.button {
+button {
   background-color: rgb(199, 199, 214);
   margin: 9px;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   border-radius: 17px;
-  padding: 5px;
-  font-size: 12px;
+  padding: 6px 0px 20px ;
+  font-size: 11px;
   font-weight: 600;
-  position: relative;
-
-  top: 10px;
+  border: none;
   color: rgb(70, 70, 230);
   width: 100px;
   height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.container button:hover{
+  background-color: rgb(172, 172, 225);
 }
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 8px;
 }
