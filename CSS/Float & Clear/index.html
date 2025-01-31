@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float & Clear</title>
+    <style>
+      .cards {
+        background-color: blue;
+        border: 2px solid black;
+        display: flow-root;
+      }
+      .card{
+        border: 2px solid red;
+      }
+      .card:nth-child(even){
+        background-color: firebrick;
+        clear: left;
+      }
+      .card:nth-last-child(1){
+        background-color: rgb(155, 139, 139);
+        clear: left;
+      }
+      .card::first-line{
+        color: rgb(85, 245, 22);
+      }
+      .card::first-letter{
+        color:sienna;
+        font-size: 23px;
+      }
+      ::selection{
+        color: black;
+        background-color: white;
+      }
+      .cards *{
+        color: salmon;
+      }
+      input::placeholder{
+        color:gold
+      }
+      img {
+        /* float: right; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        alt=""
+        width="250"
+      />
+      <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quod accusamus obcaecati, illum perspiciatis, assumenda molestias in eveniet quibusdam animi sed? Adipisci expedita fugiat at sapiente deserunt eius excepturi harum, ducimus eveniet voluptates quo beatae quos voluptatem nobis blanditiis ab quod amet cum.</div>
+      <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iste, sunt impedit recusandae quia quae facere, vollabore ipsam voluptas ea, cumque dolores sequi sunt minus unde alias eius autem, consequuntur ipsum nulla quod, possimus hic natus eos! Voluptatem, neque omnis? Laboriosam vitae praesentium officiis enim, animi repellendus! Magnam, tenetur numquam.</div>
+      <div class="card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quis, aliquid dolores laborum quidem, quibusdam volu aliquam obcaecati, corrupti quaerat minima excepturi cupiditate, architecto culpa consectetur earum iusto fugiat doloribumque rem, quo ea doloremque. Provident maxime repudiandae ratione eius vero fugiat minima at in assumenda, fuga nihil soluta accusamus non nobis tempore, libero vel? Enim beatae consequatur quo pariatur suscipit ducimus cumque qui dignissimos molestiae, earum omnis, saepe dolorum aliquid!</div>
+      <input type="Hello" placeholder="enter anything">
+    </div>
+  </body>
+</html>
