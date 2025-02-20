@@ -1,5 +1,18 @@
 console.log("Hello, world!");
-
+let a = [1,2,3,44,33]
+// console.log(a.toString());
+// console.log(a)
+// a.forEach((value,index,arr) => {
+//     console.log(value,index,arr);
+// });
+for (const value of a) {
+    console.log(value)
+}
+// let a1 =[2,3,4]
+// let a2 = [3,4,5]
+// let c = a.concat(a1,a2)
+// console.log(c)
+// console.log(a.join(" and "))
 // question 1
 // let a = [1, 2, 3, 4, 5];
 // let b = prompt('Enter a number: ');
