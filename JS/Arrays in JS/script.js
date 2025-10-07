@@ -1,87 +1,59 @@
-console.log("Hello, world!");
-let a = [1,2,3,44,33]
-// console.log(a.toString());
-// console.log(a)
-// a.forEach((value,index,arr) => {
-//     console.log(value,index,arr);
-// });
-for (const value of a) {
-    console.log(value)
+let arr = [7, 1, 2, 6, 4, 9];
+let brr = [88, 9, 5];
+let crr = ["gello", 39, 15];
+
+console.log(arr.length);
+arr[4] = 44;
+console.log(arr);
+// console.log(arr[0]);
+// console.log(arr[1]);
+// console.log(arr[4]);
+
+console.log(arr.join(" and "));
+console.log(arr.pop());
+console.log(arr.push("Bilal"));
+console.log(arr.shift());
+console.log(arr.unshift("Talha"));
+console.log(arr.concat(crr, brr));
+delete arr[3];
+console.log(arr.splice(1, 3, 67, 76));
+console.log(arr.slice(1));
+console.log(arr.slice(2, 4));
+console.log(arr.reverse());
+console.log(arr);
+
+// Loops
+// For Loop
+let a = [3, 4, 2, 8, 9];
+
+for (let index = 0; index < a.length; index++) {
+  const element = a[index];
+  console.log(element);
 }
-// let a1 =[2,3,4]
-// let a2 = [3,4,5]
-// let c = a.concat(a1,a2)
-// console.log(c)
-// console.log(a.join(" and "))
-// question 1
-// let a = [1, 2, 3, 4, 5];
-// let b = prompt('Enter a number: ');
-// a.push(b);
-// console.log(a);
 
-// question 2
-// let a = [1, 2, 3, 4, 5];
+// For Each Loop
+a.forEach((value, index, arr) => {
+  console.log(value, index, arr);
+});
 
-// let b;
-// while (true) {
-//   b = Number(prompt("Enter a positive number (Except Zero): "));
+// ForIn loop
+let obj = {
+  hlo: "44",
+  helo: "84",
+  hello: "34",
+};
+for (const key in obj) {
+  if (!Object.hasOwn(obj, key)) continue;
+  const element = obj[key];
+  console.log(key,element);
+}
 
-//   if (b > 0) {
-//     a.push(b);
-//     console.log(a);
-//   } else if (b == 0) {
-//     console.log("You entered zero. Please enter a positive number");
-//     break;
-//   } else {
-//     console.log("Enter a valid number");
-//   }
-// }
-
-// question 3
-
-// let a = [10, 15, 120];
-// let b = Number(prompt('Enter a number: '));
-// a.push(b);
-// console.log(a);
-// function ten(a) {
-//     for (let i = 0; i < a.length; i++) {
-//         if (a[i] % 10 == 0) {
-//             console.log(a[i]);
-//         }
-//     }
-// }
-// ten(a);
-
-// filter method
-// let c = [10, 1, 2, 3, 15, 13];
-// const small = (e) => {
-//   if (e > 5) {
-//     return true;
-//   }
-//   return false;
-// };
-// console.log(c.filter(small));
-
-// question 4
-
-// let a = [10, 15, 13];
-// let newa = [];
-// for (let i = 0; i < a.length; i++) {
-//     newa.push(a[i] ** 2);
-// }
-// console.log(newa);
-// let b = a.map((e) => {
-//   return e ** 2;
-// });
-// console.log(b);
-
-// question 5
-
-// let a = [1,2,3,4,5];
-// const func = (a,n) =>{
-//     return a*n
-// }
-// console.log(a.reduce(func));
-
-
+// ForOf
+for (const element of a) {
+    console.log(element);
+}
+// ForOf using entries()
+for (const [key,element] of a.entries()) {
+    console.log(key,element);
+}
 

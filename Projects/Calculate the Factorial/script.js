@@ -1,37 +1,21 @@
-console.log("Script Loaded successfully");
-
-// function factorial(n){
-//     if(n<=1){
-//         return 1;
-//     }
-//     return n * factorial(n - 1);
-// }
-// let number = 5;
-// console.log(`Factorial of ${number} is ${factorial(number)}`)
+console.log("Exercise 11 solution");
 
 let a = 4;
 
-function factorial(n) {
-  let arr = Array.from(Array(n + 1).keys());
-  if (n <= 1){
-    return 1;
-  }
-  let result = arr.slice(1).reduce((a, b) => {
-    return a * b;
-  });
-  //   let result = arr.slice(1,).reduce((a, b) => a * b );
-  return result;
+function factorial(number) {
+  let arr = Array.from(Array(number + 1).keys());
+  let c = arr.slice(1).reduce((a, b) => a * b);
+  return c;
 }
-console.log(factorial(a));
 
-function forFact(n) {
+function ForFac(number) {
   let fac = 1;
-  if (n <= 1){
-    return 1;
-  }
-  for (let i = 1; i <= n; i++) {
-    fac = fac * i;
+  for (let index = 1; index <= number; index++) {
+    fac = fac * index;
   }
   return fac;
 }
-console.log(forFact(a));
+console.log(factorial(a));
+console.log(ForFac(a));
+
+
