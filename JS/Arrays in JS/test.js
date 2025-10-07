@@ -1,11 +1,13 @@
 // Question 1
 let crr = [33, 2, 61, 15, 27];
-let value = parseInt(prompt("Enter the number to add: "));
+let value = parseInt(prompt("Enter the number to add (1): "));
+crr.push(value);
 console.log(crr);
 
 // Question 2
-if (value > 0) {
-  crr.push(value);
+let value1 = parseInt(prompt("Enter the number to add (2): "));
+if (value1 > 0) {
+  crr.push(value1);
   console.log(crr);
 } else {
   console.log(crr);
