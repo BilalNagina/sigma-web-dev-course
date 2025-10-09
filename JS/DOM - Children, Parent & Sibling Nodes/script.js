@@ -1,12 +1,44 @@
-console.log("Hello, World!");
-//question 1
-// let nav = document.body.firstElementChild.childNodes[1].firstElementChild
-// nav.firstElementChild.style.color = "red";
+console.log("Hello World!");
+// Access the container
+let con = document.body.childNodes[1]
 
-// let head = document.body.childNodes[3].firstElementChild.childNodes[1]
-// head.lastElementChild.style.color = "blue"
-// head.firstElementChild.style.color = "blue"
+// Explore Container elements using Properties
+con.firstElementChild.style.color = "red";
+con.firstElementChild
+con.firstChild
+con.lastChild
+con.lastElementChild
+con.parentElement
+con.parentNode
+con.nextSibling
+con.nextElementSibling
+con.previousSibling
+con.previousElementSibling
 
-// let nav = document.body.childNodes[3].firstElementChild.childNodes[1]
-// nav.style.color = "cyan"
+// Access Table
+document.body.children[1]
 
+// Access tbody
+document.body.children[1].children[0]
+
+// Access Table Row
+document.body.children[1].children[0].firstElementChild
+
+//Access Table Data
+document.body.children[1].children[0].firstElementChild.firstElementChild.cellIndex
+
+// Table Properties
+table.rows
+table.caption
+table.thead
+table.tbodies
+table.tfoot
+tbody.rows
+
+// Table row Properties
+tr.cells
+tr.sectionRowIndex
+tr.rowIndex
+
+//  Table Data Properties
+td.cellIndex
