@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "roboto", "Ariel", sans-serif;
+}
+.rightdiv {
+  margin-left: 80px;
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container {
+  height: 120px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+.cname {
+  color: #606060;
+  font-size: 12px;
+  margin: 0px 5px;
+  display: inline;
+}
+.views {
+  color: #606060;
+  font-size: 12px;
+  margin-right: 5px;
+  display: inline;
+}
+.months {
+  color: #606060;
+  font-size: 12px;
+  display: inline;
+}
+.duration {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  border-radius: 5px;
+  padding-left: 5px;
+  width: 35px;
+  height: 14px;
+  font-weight: 500;
+  margin-left: 80px;
+  position: relative;
+  z-index: 1;
+  top: 95px;
+  left: 75px;
+}
+
+.thumbnail > img {
+  height: 113px;
+  width: 200px;
+  border-radius: 5px;
+  position: absolute;
+}
