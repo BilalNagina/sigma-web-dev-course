@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarks Manager</title>
+  </head>
+  <body>
+    <h2>My Bookmarks</h2>
+
+    <input type="text" id="siteName" placeholder="Website Name" />
+    <input type="text" id="siteURL" placeholder="Website URL (https://...)" />
+    <button id="btn">Add Bookmark</button>
+
+    <div id="bookmarksList"></div>
+
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        let name = document.getElementById("siteName").value;
+        let url = document.getElementById("siteURL").value;
+
+        if (name === "" || url === "") {
+          alert("Please enter both name and URL!");
+          return;
+        }
+        let link = document.createElement("a");
+        link.href = url;
+        link.textContent = name;
+        link.target = "_blank";
+
+        let div = document.createElement("div");
+        div.appendChild(link);
+
+        document.getElementById("bookmarksList").appendChild(div);
+
+        document.getElementById("siteName").value = "";
+        document.getElementById("siteURL").value = "";
+      });
+    </script>
+  </body>
+</html>
