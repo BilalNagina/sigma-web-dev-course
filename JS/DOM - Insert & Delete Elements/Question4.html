@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Fetcher</title>
+  </head>
+  <body>
+    <h2>Fetched Data</h2>
+    <pre id="output">Fetching...</pre>
+    <script>
+      function Fetched() {
+        fetch("https://jsonplaceholder.typicode.com/posts/1")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("output").textContent = data;
+          })
+          .catch((error) => {
+            document.getElementById("output").textContent =
+              "Error Fetching Content!";
+          });
+      }
+
+      setInterval(Fetched, 5000);
+    </script>
+  </body>
+</html>
