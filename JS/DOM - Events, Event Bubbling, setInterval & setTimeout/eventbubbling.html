@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+  </head>
+  <style>
+    .container {
+      background-color: rgb(125, 14, 14);
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+    .child {
+      background-color: rgb(206, 213, 14);
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+    .childcontainer {
+      background-color: aqua;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="childcontainer">
+        <div class="child">I am a child</div>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".container").addEventListener("click", (e) => {
+        alert("Container clicked!");
+        e.stopPropagation();
+      });
+      document
+        .querySelector(".childcontainer")
+        .addEventListener("click", (e) => {
+          alert("Child-Container clicked!");
+          e.stopPropagation();
+        });
+      document.querySelector(".child").addEventListener("click", (e) => {
+        alert("Child clicked!");
+        e.stopPropagation();
+      });
+      document.addEventListener("keydown", (e) => {
+        console.log(e, e.key);
+      });
+      function getRandomColor() {
+        let r = Math.ceil(Math.random() * 255);
+        let g = Math.ceil(Math.random() * 255);
+        let b = Math.ceil(Math.random() * 255);
+
+        return `rgb(${r},${g},${b})`;
+      }
+
+      // **Executes Infinitely**
+      let a = setInterval(() => {
+        document.querySelector(".container").style.backgroundColor =
+          getRandomColor();
+      }, 500);
+      console.log(a);
+      clearInterval(a);
+
+      // **Executes only once**
+      let b = setTimeout(() => {
+        document.querySelector(".container").style.backgroundColor =
+          getRandomColor();
+      }, 3000);
+      console.log(b);
+      clearTimeout(1);
+    </script>
+  </body>
+</html>
