@@ -15,9 +15,9 @@ let con = document.querySelector(".box1");
 con.insertAdjacentHTML("beforebegin","<b>I am Under the WATER</b>");
 // con.insertAdjacentHTML("afterbegin","<b>I am Under the WATER</b>");
 // con.remove();
-console.log(document.querySelector(".container").classList);
-console.log(document.querySelector(".container").className);
-console.log(document.querySelector(".container").className);
+console.log(document.querySelector(".container").classList); //classList.toggle("glow");
+console.log(document.querySelector(".container").className); //classList.contains("glow");
+console.log(document.querySelector(".container").className); //classList.add/remove("glow");
 
 // **Inner and Outer HTML**
 // document.querySelector(".box1").innerHTML

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glowing bulb</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+    .con {
+      height: 60px;
+      width: 60px;
+      border: 1px solid black;
+      border-radius: 15px;
+      margin: auto;
+      padding: 10px;
+      background-color: blue;
+    }
+
+    .glow {
+      background-color: blue;
+      box-shadow: 0 0 90px blue;
+    }
+    button{
+        margin-top: 10px;
+    }
+  </style>
+  <body>
+    <h2>Cick on the button To see the Glow</h2>
+    <div class="con">💡</div>
+    <button type="button" id="btn">ON/OFF</button>
+
+    <script>
+      let bulb = document.querySelector(".con").classList;
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        bulb.toggle("glow");
+      });
+
+      console.log(bulb);
+    </script>
+  </body>
+</html>
