@@ -23,16 +23,21 @@ function cardpng(title, cname, views, months, duration, thumbnail) {
 
   div[2].className = "views";
   rightdiv.append(div[2]);
-  if (views > 999) {
+  if (views > 999999) {
     div[2].innerHTML =
-      (views / 1000).toFixed(1).replace(/\.0$/, "") + "K" + " •";
-  } else {
-    div[2].innerHTML = views + " •";
+      (views / 1000000).toFixed(1).replace(/\.0$/, "") + "M views" + " •";
+  } 
+  else if(views < 999999 && views > 999){
+    div[2].innerHTML =
+     (views / 1000).toFixed(1).replace(/\.0$/, "") + "K views" + " •";
+  }
+  else {
+    div[2].innerHTML = views + " views" + " •";
   }
 
   div[3].className = "months";
   rightdiv.append(div[3]);
-  div[3].innerHTML = months + " months";
+  div[3].innerHTML = months + " months ago";
 
   let div4 = document.createElement("div");
   div4.className = "duration";
@@ -51,7 +56,7 @@ console.log(
   cardpng(
     "Introduction to Classification | ML Course",
     "Bilal Nagina",
-    40000,
+    4000000,
     4,
     "22:10",
     "assets/ml.png"
@@ -61,7 +66,7 @@ console.log(
   cardpng(
     "Mastering Kubernetes in 60 Minutes | DevOps Crash Course",
     "Tech with Bilal",
-    185000,
+    185,
     2,
     "59:42",
     "assets/kubernetes.png"
