@@ -15,9 +15,9 @@
 //   alert("Button Three is clicked!");
 // });
 
-document.querySelectorAll("button").forEach((xyz, ibsd) => {
-  xyz.addEventListener("click", () => {
-    alert(`Button ${ibsd + 1} is clicked!`);
+document.querySelectorAll("button").forEach((btn, btnnumber) => {
+  btn.addEventListener("click", () => {
+    alert(`Button ${btnnumber + 1} is clicked!`);
   });
 });
 
