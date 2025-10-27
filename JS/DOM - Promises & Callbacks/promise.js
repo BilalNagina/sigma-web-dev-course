@@ -11,14 +11,12 @@ let prom1 = new Promise((resolve, reject) => {
     }, 200);
   }
 });
-
-// prom1
-//   .then((a1) => {
-//     console.log(a1);
-//   })
-//   .catch((er) => {
-//     console.log(er);
-//   });
+// **Question 1
+prom1
+  .then(alert)
+  .catch((er) => {
+    console.log(er);
+  });
 
 let prom2 = new Promise((resolve, reject) => {
   let a = Math.random();
