@@ -17,11 +17,14 @@ It covers all core frontend concepts through hands-on coding, mini-projects, and
 ---
 
 ## 🛠️ Repository Structure
+```
 /
 ├── HTML/ → basic web structure, tags, forms
 ├── CSS/ → stylesheets, animations, layouts
 ├── JavaScript/ → JS fundamentals, DOM, events, promises
 └── Projects/ → small web projects and practice exercises
+
+```
 
 
 ---
