@@ -22,11 +22,10 @@ console.log(user.username);
 user.username = "Bilal";
 // console.log(user.username);
 
-//** instancef property
+//**instancef property
 /*
 b instanceof sea
 true
 a instanceof sea
 false
-
 */
