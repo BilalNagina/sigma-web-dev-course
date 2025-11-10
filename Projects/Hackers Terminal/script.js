@@ -1,6 +1,6 @@
 const delay = (ms) =>
   new Promise((resolve) => {
-    setTimeout(resolve, ms);
+    setTimeout(resolve, ms * 1000);
   });
 
 let msg = [
@@ -16,10 +16,26 @@ async function random() {
     div.className = "msg dots";
     div.textContent = msg[i];
     document.body.appendChild(div);
-    let d = Math.floor(Math.random() * 6000) + 1000;
+    let d = Math.floor(Math.random() * 6) + 1;
     await delay(d);
     div.classList.remove("dots");
   }
 }
+//Modern way to write and execute a function immediately
+(async () => {
+  await random();
+  let last = document.createElement("div");
+  last.className = "msg";
+  last.textContent = "Brother! You are HACKED...cOnGRrATuLaTiOnS";
+  document.body.appendChild(last);
+})();
+// Normally written as:
+// async function run() {
+//   await random();
 
-random();
+//   let last = document.createElement("div");
+//   last.className = "msg";
+//   last.textContent = "Brother! You are HACKED...cOnGRrATuLaTiOnS";
+//   document.body.appendChild(last);
+// }
+// run();
